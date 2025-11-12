@@ -1,10 +1,7 @@
 package com.study.board.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -18,4 +15,9 @@ public class Board {
     private String title;
 
     private String content;
+
+    @Column(name = "filename")
+    private String fileName;
+    @Column(name = "filepath")
+    private String filePath;
 }
